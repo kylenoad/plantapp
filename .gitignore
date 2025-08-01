@@ -1,0 +1,14 @@
+/frontend/node_modules/
+
+/frontend/dist/
+/frontend/build/
+
+/backend/__pycache__/
+/backend/*.pyc
+/backend/venv/
+
+/pi-sensor/__pycache__/
+/pi-sensor/*.pyc
+/pi-sensor/venv/
+
+.env
