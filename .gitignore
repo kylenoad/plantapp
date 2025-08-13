@@ -11,4 +11,6 @@
 /pi-sensor/*.pyc
 /pi-sensor/venv/
 
-.env
+.env.dev 
+.env.prod
+.env.dev

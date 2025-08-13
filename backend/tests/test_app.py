@@ -155,5 +155,97 @@ class TestReadingsYear:
             assert reading_time <= now
 
 
+class TestLatestReading:
+    def test_latest_reading_response_keys(self, client):
+        response = client.get('/latest')
+        assert response.status_code == 200
 
+        data = response.get_json()
+        assert "moisture_level" in data
+        assert "timestamp" in data
 
+    def test_return_latest_reading(self, client):
+        conn = connect_to_db()
+        cur = conn.cursor()
+        try:
+            cur.execute("SELECT moisture_level FROM moisture_readings ORDER BY timestamp DESC LIMIT 1;")
+            expected_value = cur.fetchone()[0]
+        finally:
+            cur.close()
+            conn.close()
+
+        response = client.get('/latest')
+        assert response.status_code == 200
+
+        data = response.get_json()
+        assert data["moisture_level"] == expected_value
+
+    def test_latest_reading_empty_table(self, client):
+        conn = connect_to_db()
+        cur = conn.cursor()
+        try:
+            cur.execute("DELETE FROM moisture_readings;")
+            conn.commit()
+        finally:
+            cur.close()
+            conn.close()
+
+        response = client.get('/latest')
+        assert response.status_code == 404
+
+        data = response.get_json()
+        assert "error" in data
+        assert data["error"] == "No readings found"
+
+    
+class TestWateringStatus:
+    def test_status_ok_when_moisture_is_in_ok_range(self, client):
+        conn = connect_to_db()
+        cur = conn.cursor()
+        try:
+            cur.execute("INSERT INTO moisture_readings (moisture_level) VALUES (%s);", (500,))
+            conn.commit()
+        finally:
+            cur.close()
+            conn.close()
+
+        response = client.get('/status')
+        data = response.get_json()
+
+        assert response.status_code == 200
+        assert data['status'] == 'ok'
+        assert data['moisture_level'] == 500
+
+    def test_status_ok_when_moisture_is_in_drying_out_range(self, client):
+        conn = connect_to_db()
+        cur = conn.cursor()
+        try:
+            cur.execute("INSERT INTO moisture_readings (moisture_level) VALUES (%s);", (650,))
+            conn.commit()
+        finally:
+            cur.close()
+            conn.close()
+
+        response = client.get('/status')
+        data = response.get_json()
+
+        assert response.status_code == 200
+        assert data['status'] == 'water soon'
+        assert data['moisture_level'] == 650
+
+    def test_status_ok_when_moisture_is_in_too_dry_range(self, client):
+        conn = connect_to_db()
+        cur = conn.cursor()
+        try:
+            cur.execute("INSERT INTO moisture_readings (moisture_level) VALUES (%s);", (750,))
+            conn.commit()
+        finally:
+            cur.close()
+            conn.close()
+
+        response = client.get('/status')
+        data = response.get_json()
+
+        assert response.status_code == 200
+        assert data['status'] == 'needs watering'
+        assert data['moisture_level'] == 750

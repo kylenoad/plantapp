@@ -37,8 +37,8 @@ def setup_database():
         cur.execute(CREATE_TABLE_SQL)
         conn.commit()
     finally:
-        cur.close()   # Close the cursor explicitly
-        conn.close()  # Then close the connection
+        cur.close()   
+        conn.close()  
 
 
 #seeds data with realistic drying conditions and moisture spikes to simulate watering
