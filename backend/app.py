@@ -5,7 +5,8 @@ from flask_cors import CORS
 import os
 from dotenv import load_dotenv
 
-load_dotenv(".env.dev")
+if os.getenv("FLASK_ENV") != "production":
+    load_dotenv(".env.dev")
 
 app = Flask(__name__)
 CORS(app)
