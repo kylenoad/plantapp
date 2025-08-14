@@ -2,7 +2,6 @@ import React from "react";
 import LastWatered from "../components/LastWatered";
 import "../App.css";
 
-
 function Dashboard() {
   return (
     <div className="dashboard">
