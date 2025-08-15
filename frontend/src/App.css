@@ -68,3 +68,7 @@
 .offline {
   background-color: red;
 }
+
+.timestamp {
+  font-size: 0.5rem;
+}
