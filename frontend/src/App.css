@@ -23,3 +23,24 @@
   border-radius: 8px;
   padding: 1rem;
 }
+
+.period-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.period-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #ddd;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.period-buttons button:hover {
+  background-color: #bbb;
+}

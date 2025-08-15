@@ -12,13 +12,13 @@ describe("LastWatered component", () => {
   });
 
   test("shows 'unknown' when no watering is found", async () => {
-    const fakeReadings = [
+    const testReadings = [
       { timestamp: "2025-08-01T10:00:00Z", moisture_level: 500 },
       { timestamp: "2025-08-02T10:00:00Z", moisture_level: 490 },
     ];
 
     fetch.mockResolvedValueOnce({
-      json: async () => fakeReadings,
+      json: async () => testReadings,
     });
     
     render(<LastWatered />);
@@ -29,13 +29,13 @@ describe("LastWatered component", () => {
   });
 
   test("shows a date when a watering is detected", async () => {
-    const fakeReadings = [
+    const testReadings = [
       { timestamp: "2025-08-01T10:00:00Z", moisture_level: 500 },
       { timestamp: "2025-08-02T10:00:00Z", moisture_level: 350 },
     ];
 
     fetch.mockResolvedValueOnce({
-      json: async () => fakeReadings,
+      json: async () => testReadings,
     });
 
     render(<LastWatered />);

@@ -1,6 +1,5 @@
-// src/App.js
 import React from "react";
-import Dashboard from "./pages/Dashboard"
+import Dashboard from "./pages/Dashboard";
 import "./App.css";
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
       <header className="App-header">
         <h1>Plant Monitor</h1>
       </header>
-
       <main>
         <Dashboard />
       </main>
