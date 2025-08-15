@@ -42,5 +42,4 @@ function WaterAlert() {
   );
   
 }
-
 export default WaterAlert;
