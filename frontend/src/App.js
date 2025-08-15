@@ -1,19 +1,24 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import SensorStatus from "./components/SensorStatus";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Plant Monitor</h1>
-        <SensorStatus/>
-      </header>
-      <main>
-        <Dashboard />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Plant Monitor</h1>
+          <SensorStatus />
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
