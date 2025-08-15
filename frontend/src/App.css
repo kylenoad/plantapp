@@ -2,6 +2,10 @@
   background-color: #282c34;
   padding: 0.5rem;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.5rem; 
 }
 
 .App-header h1 {
