@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../App.css";
 
 function SensorStatus() {
   const [sensorStatus, setSensorStatus] = useState("offline");
@@ -32,7 +33,8 @@ function SensorStatus() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="status-container">
+      <span className={`status-dot ${sensorStatus}`} />
       <p>{sensorStatus}</p>
     </div>
   );
