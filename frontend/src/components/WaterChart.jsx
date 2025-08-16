@@ -34,6 +34,7 @@ function WaterChart() {
           `https://plantapp-q6a5.onrender.com/readings?period=${period}`
         );
         const fetchedData = await res.json();
+
         setData(fetchedData);
       } catch (err) {
         console.error("Error fetching status:", err);
