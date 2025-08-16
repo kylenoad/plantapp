@@ -14,6 +14,13 @@ Note: If the dashboard hasn’t been used for a while, it may take ~30 seconds t
 ![Plant 1](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
 ![Plant 2](https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577)
 
+## Table of Contents
+- [Database Setup](#database-setup)
+- [Running the App](#running-the-app)
+- [Hardware Required](#hardware-required)
+- [Hardware Setup](#hardware-setup)
+- [Future Developments](#future-developments)
+
 
 ### Database Setup
 
