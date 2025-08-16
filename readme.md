@@ -78,14 +78,14 @@ With the backend running navigate to the frontend folder and run npm run dev
 
 - [Raspberry Pi 4 (any model with 40 pin header )](https://thepihut.com/products/raspberry-pi-4-model-b)  
 - [XL Raspberry Pi 4 Heatsink](https://thepihut.com/products/xl-raspberry-pi-4-heatsink) 
-- [Raspberry Pi 15W USB-C Power Supply](https://thepihut.com/products/raspberry-pi-15w-usb-c-power-supply-uk-plug)  
+- [Raspberry Pi 15W USB-C Power Supply](https://thepihut.com/products/raspberry-pi-psu-uk)  
 - [SanDisk MicroSD Card)](https://thepihut.com/products/sandisk-microsd-card-class-10-a1)
-- [Half-Size Breadboard](https://thepihut.com/products/half-size-breadboard-white)  
+- [Half-Size Breadboard](https://thepihut.com/products/raspberry-pi-breadboard-half-size)  
 - [Premium Female/Male Jumper Wires”)](https://thepihut.com/products/premium-female-male-extension-jumper-wires-20-x-6)
 - [Premium Male/Male Jumper Wires″](https://thepihut.com/products/premium-male-male-jumper-wires-20-x-6-150mm)  
 - [Premium Female/Female Jumper Wires″](https://thepihut.com/products/premium-female-female-jumper-wires-40-x-6)  
 - [MCP3008 – 8-Channel 10-Bit ADC](https://thepihut.com/products/mcp3008-8-channel-10-bit-adc-with-spi-interface)  
-- [Capacitive Soil Moisture Sensor v2.0](https://thepihut.com/products/capacitive-soil-moisture-sensor-v2-0)  
+- [Capacitive Soil Moisture Sensor v2.0](https://thepihut.com/products/capacitive-soil-moisture-sensor)  
 
 ![20250726_185822](https://github.com/user-attachments/assets/d2d575ec-875e-4397-a51e-8762a96e1d41)
 
