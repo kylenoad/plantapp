@@ -1,21 +1,15 @@
-# Plant Moisture Monitor – Database Setup
+#PlantVue
+PlantVue is a Raspberry Pi powered smart plant monitoring application that tracks soil moisture levels in real time and displays the data on a live dashboard. The system helps plant owners keep their plants healthy by providing up-to-date moisture readings and visualizations.
+
+[View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
+
+![20250816_144820](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
+
+## Plant Moisture Monitor – Database Setup
 
 This repository contains the setup script for initializing the PostgreSQL database used in the **Plant Moisture Monitor** project.
 
-## Requirements
-
-- Python 3.8+
-- PostgreSQL (local or cloud instance)
-- pip packages:
-  - `psycopg2`
-  - `python-dotenv`
-
-## Project Structure
-
-***********************TO ADD LATER************************************
-
-
-## Environment Setup
+## Setup
 
 1. **Clone this repository**  
     git clone https://github.com/kylenoad/plantapp.git
