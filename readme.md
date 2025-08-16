@@ -1,5 +1,5 @@
 # PlantVue
-PlantVue is a Raspberry Pi powered smart plant monitoring application that tracks soil moisture levels in real time and displays the data on a live dashboard. The system helps plant owners keep their plants healthy by providing up-to-date moisture readings and visualizations.
+PlantVue is a Raspberry Pi powered smart plant monitoring application that tracks soil moisture levels in real time and displays the data on a live dashboard. The system helps plant owners keep their plants healthy by providing up-to-date moisture readings and visualisations.
 
 **Dashboard Components:**
 - **Current Moisture** – Shows the latest soil moisture reading.  
