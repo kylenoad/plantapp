@@ -122,3 +122,10 @@ Make sure SPI is enabled on the Raspberry Pi by running sudo raspi-config
 If you're setting up your Raspberry Pi without a monitor, keyboard, or mouse, this guide walks you through flashing the OS and enabling SSH for remote access:
 [How to set up Raspberry Pi headlessly](https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html)
 
+
+## Future Developments
+
+- **Plant-specific moisture thresholds:** Currently, the app uses general moisture thresholds (`OK`, `Drying`, `Dry`) suitable for most houseplants. These thresholds were tested and calibrated to ensure they reflect realistic soil moisture conditions. Future versions will allow users to select their specific plant, dynamically adjusting these thresholds for more accurate alerts for that specific plant.
+- **Email notifications:** Implementing email alerts to notify users when a plant needs watering.  
+- **Multi-sensor support:** Enabling the system to monitor multiple plants simultaneously.
+- **Light sensor integration:** Track sunlight exposure for plants and integrate a plant API to get ideal light hours for each plant and set alerts accordingly.  
