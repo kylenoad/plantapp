@@ -16,7 +16,7 @@ PlantVue is a Raspberry Pi powered smart plant monitoring application that track
 
 ## Plant Moisture Monitor – Database Setup
 
-This repository contains the setup script for initializing the PostgreSQL database used in the **Plant Moisture Monitor** project.
+This repository contains the setup script for initializing the PostgreSQL database used in the **Plant Moisture Monitor** project, and seeing with test data
 
 ## Setup
 
@@ -31,7 +31,7 @@ This repository contains the setup script for initializing the PostgreSQL databa
 3. **Install dependencies** 
     pip install -r requirements.txt
 
-3. **Create PostgreSQL user and database**
+4. **Create PostgreSQL user and database**
     sudo -u postgres psql
 
     inside psql promt, type:
@@ -39,14 +39,17 @@ This repository contains the setup script for initializing the PostgreSQL databa
         CREATE USER plantapp_user WITH PASSWORD 'yourpassword';
         GRANT ALL PRIVILEGES ON DATABASE plant_db TO plantapp_user;
 
-4. **Set up a .env file** 
+5. **Set up a .env file** 
     Create a .env file in the backend/ directory with the following:
     DATABASE_URL=postgresql://plantapp_user:yourpassword@localhost:5432/plant_db
     **Replace plantapp_user, yourpassword, and plant_db with your PostgreSQL username, password, and database name.**
 
-5. **Run the setup db script** 
-    python setup_db.py
-
+6. **Run the setup and seed script**
+    in bash, run python setup_db.py .env
+   
+    Replace `.env` with the path to your environment file (e.g., `.env.dev` or `.env.test`).  
     This script will:
-        Connect to your database using the DATABASE_URL
-        Create the moisture_readings table if it doesn’t already exist
+    - Create the `moisture_readings` table if it doesn’t exist
+    - Delete any existing data in the table
+    - Populate it with realistic test moisture readings for the past year
+
