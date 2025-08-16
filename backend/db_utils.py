@@ -1,13 +1,8 @@
-import os
-import psycopg2
-from dotenv import load_dotenv
-
-load_dotenv()
-DATABASE_URL = os.getenv("DATABASE_URL")
+from db_connection import connect_to_db
 
 def insert_reading(moisture_level):
     try:
-        conn = psycopg2.connect(DATABASE_URL)
+        conn = connect_to_db()
         cur = conn.cursor()
         cur.execute(
             "INSERT INTO moisture_readings (moisture_level) VALUES (%s);",
