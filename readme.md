@@ -8,6 +8,7 @@ PlantVue is a Raspberry Pi powered smart plant monitoring application that track
 - **Last Watered** – Indicates when the last watering event happened.
 
 [View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
+
 Note: If the dashboard hasn’t been used for a while, it may take ~30 seconds to load. This is because the backend API is hosted on a free tier and spins down during inactivity.
 
 ![Plant 1](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
