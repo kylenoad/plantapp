@@ -86,14 +86,14 @@ With the backend running navigate to the frontend folder and run npm run dev
 
 ## Hardware Required
 
-- [Raspberry Pi 4 (any model with 40 pin header )](https://thepihut.com/products/raspberry-pi-4-model-b)  
+- [Raspberry Pi 4 (any model with 40 pin header)](https://thepihut.com/products/raspberry-pi-4-model-b)  
 - [XL Raspberry Pi 4 Heatsink](https://thepihut.com/products/xl-raspberry-pi-4-heatsink) 
 - [Raspberry Pi 15W USB-C Power Supply](https://thepihut.com/products/raspberry-pi-psu-uk)  
-- [SanDisk MicroSD Card)](https://thepihut.com/products/sandisk-microsd-card-class-10-a1)
+- [SanDisk MicroSD Card](https://thepihut.com/products/sandisk-microsd-card-class-10-a1)
 - [Half-Size Breadboard](https://thepihut.com/products/raspberry-pi-breadboard-half-size)  
-- [Premium Female/Male Jumper Wires”)](https://thepihut.com/products/premium-female-male-extension-jumper-wires-20-x-6)
-- [Premium Male/Male Jumper Wires″](https://thepihut.com/products/premium-male-male-jumper-wires-20-x-6-150mm)  
-- [Premium Female/Female Jumper Wires″](https://thepihut.com/products/premium-female-female-jumper-wires-40-x-6)  
+- [Premium Female/Male Jumper Wires](https://thepihut.com/products/premium-female-male-extension-jumper-wires-20-x-6)
+- [Premium Male/Male Jumper Wires](https://thepihut.com/products/premium-male-male-jumper-wires-20-x-6-150mm)  
+- [Premium Female/Female Jumper Wires](https://thepihut.com/products/premium-female-female-jumper-wires-40-x-6)  
 - [MCP3008 – 8-Channel 10-Bit ADC](https://thepihut.com/products/mcp3008-8-channel-10-bit-adc-with-spi-interface)  
 - [Capacitive Soil Moisture Sensor v2.0](https://thepihut.com/products/capacitive-soil-moisture-sensor)  
 
@@ -135,4 +135,8 @@ If you're setting up your Raspberry Pi without a monitor, keyboard, or mouse, th
 - **Plant-specific moisture thresholds:** Currently, the app uses general moisture thresholds (`OK`, `Drying`, `Dry`) suitable for most houseplants. These thresholds were tested and calibrated to ensure they reflect realistic soil moisture conditions. Future versions will allow users to select their specific plant, dynamically adjusting these thresholds for more accurate alerts for that specific plant.
 - **Email notifications:** Implementing email alerts to notify users when a plant needs watering.  
 - **Multi-sensor support:** Enabling the system to monitor multiple plants simultaneously.
-- **Light sensor integration:** Track sunlight exposure for plants and integrate a plant API to get ideal light hours for each plant and set alerts accordingly.  
+- **Light sensor integration:** Track sunlight exposure for plants and integrate a plant API to get ideal light hours for each plant and set alerts accordingly.
+
+## Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
