@@ -5,9 +5,8 @@ PlantVue is a Raspberry Pi powered smart plant monitoring application that track
 
 <div style="display: flex; gap: 20px; align-items: center;">
   <img src="https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821" style="height: 300px;">
-  <img src="https://github.com/user-attachments/assets/abe99b4f-cd16-4fad-a4af-c5c4853dfc5f" style="height: 300px;">
+  <img src="https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577" style="height: 300px;">
 </div>
-
 
 ## Plant Moisture Monitor – Database Setup
 
