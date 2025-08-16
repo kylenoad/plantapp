@@ -69,6 +69,8 @@ function WaterChart() {
       dateOptions = { day: "numeric", month: "short" };
     }
 
+    chartData.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    
     chartRef.current = new Chart(ctx, {
       type: "line",
       data: {
