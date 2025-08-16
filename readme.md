@@ -1,6 +1,12 @@
 # PlantVue
 PlantVue is a Raspberry Pi powered smart plant monitoring application that tracks soil moisture levels in real time and displays the data on a live dashboard. The system helps plant owners keep their plants healthy by providing up-to-date moisture readings and visualizations.
 
+**Dashboard Components:**
+- **Current Moisture** – Shows the latest soil moisture reading.  
+- **Moisture Chart** – Visualises moisture trends over time (Day, Week, Month, Year).  
+- **Plant Status Indicators** – Highlights whether plants need watering.  
+- **Last Watered** – Indicates when the last watering event happened.
+
 [View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
 
 ![Plant 1](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
