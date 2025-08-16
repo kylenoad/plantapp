@@ -8,6 +8,7 @@ PlantVue is a Raspberry Pi powered smart plant monitoring application that track
 - **Last Watered** – Indicates when the last watering event happened.
 
 [View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
+Note: If the dashboard hasn’t been used for a while, it may take ~30 seconds to load. This is because the backend API is hosted on a free tier and spins down during inactivity.
 
 ![Plant 1](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
 ![Plant 2](https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577)
@@ -89,4 +90,34 @@ With the backend running navigate to the frontend folder and run npm run dev
 - [Capacitive Soil Moisture Sensor v2.0](https://thepihut.com/products/capacitive-soil-moisture-sensor)  
 
 ![20250726_185822](https://github.com/user-attachments/assets/d2d575ec-875e-4397-a51e-8762a96e1d41)
+
+
+## Hardware Setup
+
+PlantVue uses the **MCP3008 ADC** to read the analog signal from the capacitive moisture sensor and pass it to the Raspberry Pi via SPI.
+
+### Connections
+
+#### MCP3008 → Raspberry Pi (SPI interface)
+- **VDD → 3.3V (Pin 1)**
+- **VREF → 3.3V (Pin 1)**
+- **AGND → GND (Pin 6)**
+- **DGND → GND (Pin 9)**
+- **CLK → GPIO11 / SCLK (Pin 23)**
+- **DOUT → GPIO9 / MISO (Pin 21)**
+- **DIN → GPIO10 / MOSI (Pin 19)**
+- **CS/SHDN → GPIO8 / CE0 (Pin 24)**
+
+#### Moisture Sensor → MCP3008
+- **Sensor VCC → 3.3V (same rail as VDD)**
+- **Sensor GND → GND**
+- **Sensor OUT → CH0 (Pin 1 on MCP3008)**
+
+### SPI Enable
+Make sure SPI is enabled on the Raspberry Pi by running sudo raspi-config
+
+### Running Raspberry Pi Headlessly
+
+If you're setting up your Raspberry Pi without a monitor, keyboard, or mouse, this guide walks you through flashing the OS and enabling SSH for remote access:
+[How to set up Raspberry Pi headlessly](https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html)
 
