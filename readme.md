@@ -3,10 +3,9 @@ PlantVue is a Raspberry Pi powered smart plant monitoring application that track
 
 [View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
 
-<div style="display: flex; gap: 20px; align-items: center;">
-  <img src="https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821" style="height: 300px;">
-  <img src="https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577" style="height: 300px;">
-</div>
+![Image1](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
+![Image2](https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577)
+
 
 ## Plant Moisture Monitor – Database Setup
 
