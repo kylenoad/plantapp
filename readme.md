@@ -35,7 +35,7 @@ This repository contains the setup script for initializing and seeding the Postg
 4. **Create PostgreSQL user and database**
     sudo -u postgres psql
 
-    inside psql promt, type:
+    inside psql prompt, type:
         CREATE DATABASE plant_db;
         CREATE USER plantapp_user WITH PASSWORD 'yourpassword';
         GRANT ALL PRIVILEGES ON DATABASE plant_db TO plantapp_user;
@@ -60,7 +60,7 @@ This repository contains the setup script for initializing and seeding the Postg
 ### Option 1: Run locally with test data
 Follow the setup steps above to create and seed the database.  
 This will simulate a year’s worth of realistic soil moisture data, which you can then view in the dashboard.
-To run the frontend, navigare to the frontend folder and run npm run dev.
+To run the frontend, navigate to the frontend folder and run npm run dev.
 
 ### Option 2: Run on a Raspberry Pi with the sensor
 To collect live data from the soil moisture sensor, copy the following files to your Raspberry Pi:
