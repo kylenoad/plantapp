@@ -13,7 +13,6 @@ PlantVue is a Raspberry Pi powered smart plant monitoring application that track
 ![Plant 2](https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577)
 
 
-
 ### Database Setup
 
 This repository contains the setup script for initializing and seeding the PostgreSQL database with test data.
@@ -53,4 +52,25 @@ This repository contains the setup script for initializing and seeding the Postg
     - Create the `moisture_readings` table if it doesn’t exist
     - Delete any existing data in the table
     - Populate it with realistic test moisture readings for the past year
+
+## Running the App
+
+### Option 1: Run locally with test data
+Follow the setup steps above to create and seed the database.  
+This will simulate a year’s worth of realistic soil moisture data, which you can then view in the dashboard.
+
+### Option 2: Run on a Raspberry Pi with the sensor
+To collect live data from the soil moisture sensor, copy the following files to your Raspberry Pi:
+
+- sensor_reader.py
+- db_connection.py
+- read_moisture.py
+- requirements.py
+- .env
+
+On the Raspberry Pi, activate your virtual environment (python3 -m venv venv source venv/bin/activate). Next run pip install -r requirements.txt
+
+Finally run: python sensor_reader.py to start the sensor readings. By default, the script is set to take a reading every hour. 
+
+With the backend running navigate to the frontend folder and run npm run dev
 
