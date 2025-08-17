@@ -148,7 +148,8 @@ If you're running the app locally, you can:
 
 ## Future Developments
 
-- **Plant-specific moisture thresholds:** Currently, the app uses general moisture thresholds (`OK`, `Drying`, `Dry`) suitable for most houseplants. These thresholds were tested and calibrated to ensure they reflect realistic soil moisture conditions. Future versions will allow users to select their specific plant, dynamically adjusting these thresholds for more accurate alerts for that specific plant.
+- **Plant-specific moisture thresholds:** Currently, the app uses general moisture thresholds suitable for most houseplants. These thresholds were tested and calibrated using a variety of common houseplants to ensure they reflect realistic soil moisture conditions. Future versions will allow users to select their specific plant, dynamically adjusting these thresholds for more accurate alerts tailored to that plant.
+- **Email notifications:** Implementing email alerts to notify users when a plant needs watering.   were tested and calibrated to ensure they reflect realistic soil moisture conditions. Future versions will allow users to select their specific plant, dynamically adjusting these thresholds for more accurate alerts for that specific plant.
 - **Email notifications:** Implementing email alerts to notify users when a plant needs watering.  
 - **Multi-sensor support:** Enabling the system to monitor multiple plants simultaneously.
 - **Light sensor integration:** Track sunlight exposure for plants and integrate a plant API to get ideal light hours for each plant and set alerts accordingly.
