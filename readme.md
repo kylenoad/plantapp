@@ -67,7 +67,12 @@ This repository contains the setup script for initializing and seeding the Postg
 ### Option 1: Run locally with test data
 Follow the setup steps above to create and seed the database.  
 This will simulate a year’s worth of realistic soil moisture data, which you can then view in the dashboard.
-To run the frontend, navigate to the frontend folder and run npm run dev.
+To run the frontend:
+```bash
+cd frontend
+npm install
+npm run dev
+
 
 ### Option 2: Run on a Raspberry Pi with the sensor
 To collect live data from the soil moisture sensor, copy the following files to your Raspberry Pi:
@@ -75,7 +80,7 @@ To collect live data from the soil moisture sensor, copy the following files to 
 - sensor_reader.py
 - db_connection.py
 - read_moisture.py
-- requirements.py
+- requirements.txt
 - .env
 
 On the Raspberry Pi, activate your virtual environment (python3 -m venv venv source venv/bin/activate). Next run pip install -r requirements.txt
