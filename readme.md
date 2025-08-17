@@ -154,8 +154,6 @@ If you're running the app locally, you can:
 - **Multi-sensor support:** Enabling the system to monitor multiple plants simultaneously.
 - **Light sensor integration:** Track sunlight exposure for plants and integrate a plant API to get ideal light hours for each plant and set alerts accordingly.
 
-https://www.youtube.com/watch?v=Ey75OJ2yHTM
-
 ## Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
 
