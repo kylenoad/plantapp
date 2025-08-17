@@ -72,6 +72,7 @@ To run the frontend:
 cd frontend
 npm install
 npm run dev
+```
 
 
 ### Option 2: Run on a Raspberry Pi with the sensor
