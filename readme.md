@@ -1,15 +1,16 @@
 # PlantVue
 PlantVue is a Raspberry Pi powered smart plant monitoring application that tracks soil moisture levels in real time and displays the data on a live dashboard. The system helps plant owners keep their plants healthy by providing up-to-date moisture readings and visualisations.
 
+## [View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
+
+Note: If the dashboard hasn’t been used for a while, it may take ~30 seconds to load. This is because the backend API is hosted on a free tier and spins down during inactivity.
+
 **Dashboard Components:**
 - **Current Moisture** – Shows the latest soil moisture reading.  
 - **Moisture Chart** – Visualises moisture trends over time (Day, Week, Month, Year).  
 - **Plant Status Indicators** – Highlights whether plants need watering.  
 - **Last Watered** – Indicates when the last watering event happened.
 
-[View the live Plant Monitor dashboard](https://plantvue.netlify.app/)
-
-Note: If the dashboard hasn’t been used for a while, it may take ~30 seconds to load. This is because the backend API is hosted on a free tier and spins down during inactivity.
 
 ![Plant 1](https://github.com/user-attachments/assets/08ac5ba7-ba06-44b1-8266-b46a5c149821)
 ![Plant 2](https://github.com/user-attachments/assets/7bce8b52-3fc4-4aae-bb98-7fa55d625577)
@@ -19,10 +20,9 @@ Note: If the dashboard hasn’t been used for a while, it may take ~30 seconds t
 - [Running the App](#running-the-app)
 - [Hardware Required](#hardware-required)
 - [Hardware Setup](#hardware-setup)
+- [Hosting Details](#hosting-details)
 - [Future Developments](#future-developments)
 
-
-### Database Setup
 
 This repository contains the setup script for initializing and seeding the PostgreSQL database with test data.
 
@@ -134,6 +134,16 @@ Make sure SPI is enabled on the Raspberry Pi by running sudo raspi-config
 
 If you're setting up your Raspberry Pi without a monitor, keyboard, or mouse, this guide walks you through flashing the OS and enabling SSH for remote access:
 [How to set up Raspberry Pi headlessly](https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html)
+
+## Hosting Details
+
+- **Backend API**: Hosted on [Render](https://render.com) 
+- **Database**: Hosted on [Supabase](https://supabase.com)
+- **Frontend Dashboard**: Deployed on [Netlify](https://www.netlify.com)
+
+If you're running the app locally, you can:
+- Use the included setup script to simulate data with a local PostgreSQL instance
+- Or connect to your Supabase project by updating the `.env` file with your Supabase credentials and URL
 
 
 ## Future Developments
