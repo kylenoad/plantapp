@@ -18,6 +18,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <p>Note: All data displayed prior to August 16th is test data. Live data from the Raspberry Pi has been inserted starting August 16th.</p>
     </Router>
   );
 }
