@@ -83,62 +83,23 @@ function CurrentMoisture() {
   if (!data) return <p>Error loading moisture data</p>;
 
   return (
-    <div style={{ width: "200px", height: "200px", margin: "auto" }}>
-      <canvas ref={canvasRef}></canvas>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "20px",
+        margin: "auto",
+      }}
+    >
+      <div style={{ width: "200px", height: "200px" }}>
+        <canvas ref={canvasRef}></canvas>
+      </div>
 
-      <div style={{ marginTop: "10px", textAlign: "left" }}>
-        <div
-          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
-        >
-          <div
-            style={{
-              width: "15px",
-              height: "15px",
-              backgroundColor: "#f32c12cc",
-              marginRight: "6px",
-            }}
-          ></div>
-          <span>Too Dry (0-20%)</span>
-        </div>
-        <div
-          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
-        >
-          <div
-            style={{
-              width: "15px",
-              height: "15px",
-              backgroundColor: "#f32c12cc",
-              marginRight: "6px",
-            }}
-          ></div>
-          <span>Drying Out (21-40%)</span>
-        </div>
-        <div
-          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
-        >
-          <div
-            style={{
-              width: "15px",
-              height: "15px",
-              backgroundColor: "#f32c12cc",
-              marginRight: "6px",
-            }}
-          ></div>
-          <span>Optimal (41-75%)</span>
-        </div>
-        <div
-          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
-        >
-          <div
-            style={{
-              width: "15px",
-              height: "15px",
-              backgroundColor: "#f32c12cc",
-              marginRight: "6px",
-            }}
-          ></div>
-          <span>Too Wet (76-100%)</span>
-        </div>
+      <div style={{ textAlign: "left" }}>
+        <div style={{ marginBottom: "4px" }}>Too Dry (81-100%)</div>
+        <div style={{ marginBottom: "4px" }}>Drying Out (61-80%)</div>
+        <div style={{ marginBottom: "4px" }}>Optimal (41-60%)</div>
+        <div style={{ marginBottom: "4px" }}>Too Wet (0-40%)</div>
       </div>
     </div>
   );
