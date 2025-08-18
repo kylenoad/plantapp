@@ -1,11 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { convertToPercent } from "../utils/convertToPercent";
-import {
-  Chart,
-  DoughnutController,
-  ArcElement,
-  Title,
-} from "chart.js";
+import { Chart, DoughnutController, ArcElement, Title } from "chart.js";
 
 Chart.register(DoughnutController, ArcElement, Title);
 
@@ -90,6 +85,61 @@ function CurrentMoisture() {
   return (
     <div style={{ width: "200px", height: "200px", margin: "auto" }}>
       <canvas ref={canvasRef}></canvas>
+
+      <div style={{ marginTop: "10px", textAlign: "left" }}>
+        <div
+          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
+        >
+          <div
+            style={{
+              width: "15px",
+              height: "15px",
+              backgroundColor: "#f32c12cc",
+              marginRight: "6px",
+            }}
+          ></div>
+          <span>Too Dry (0-20%)</span>
+        </div>
+        <div
+          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
+        >
+          <div
+            style={{
+              width: "15px",
+              height: "15px",
+              backgroundColor: "#f32c12cc",
+              marginRight: "6px",
+            }}
+          ></div>
+          <span>Drying Out (21-40%)</span>
+        </div>
+        <div
+          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
+        >
+          <div
+            style={{
+              width: "15px",
+              height: "15px",
+              backgroundColor: "#f32c12cc",
+              marginRight: "6px",
+            }}
+          ></div>
+          <span>Optimal (41-75%)</span>
+        </div>
+        <div
+          style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}
+        >
+          <div
+            style={{
+              width: "15px",
+              height: "15px",
+              backgroundColor: "#f32c12cc",
+              marginRight: "6px",
+            }}
+          ></div>
+          <span>Too Wet (76-100%)</span>
+        </div>
+      </div>
     </div>
   );
 }
