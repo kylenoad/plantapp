@@ -20,7 +20,7 @@ Chart.register(
 );
 
 function WaterChart() {
-  const [period, setPeriod] = useState("month");
+  const [period, setPeriod] = useState("week");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const canvasRef = useRef(null);
@@ -70,7 +70,7 @@ function WaterChart() {
     }
 
     chartData.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-    
+
     chartRef.current = new Chart(ctx, {
       type: "line",
       data: {
