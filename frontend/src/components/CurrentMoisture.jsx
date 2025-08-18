@@ -83,23 +83,16 @@ function CurrentMoisture() {
   if (!data) return <p>Error loading moisture data</p>;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "flex-start",
-        gap: "20px",
-        margin: "auto",
-      }}
-    >
+    <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
       <div style={{ width: "200px", height: "200px" }}>
         <canvas ref={canvasRef}></canvas>
       </div>
 
-      <div style={{ textAlign: "left" }}>
-        <div style={{ marginBottom: "4px" }}>Too Dry (81-100%)</div>
-        <div style={{ marginBottom: "4px" }}>Drying Out (61-80%)</div>
-        <div style={{ marginBottom: "4px" }}>Optimal (41-60%)</div>
-        <div style={{ marginBottom: "4px" }}>Too Wet (0-40%)</div>
+      <div style={{ textAlign: "left", fontSize: "11px", lineHeight: "1.5", color: "#666" }}>
+        <div style={{ marginBottom: "4px" }}>Too Dry (0–30%)</div>
+        <div style={{ marginBottom: "4px" }}>Drying Out (31–45%)</div>
+        <div style={{ marginBottom: "4px" }}>Optimal (46–90%)</div>
+        <div style={{ marginBottom: "4px" }}>Too Wet (91–100%)</div>
       </div>
     </div>
   );
