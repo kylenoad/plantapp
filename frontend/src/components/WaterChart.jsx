@@ -74,9 +74,22 @@ function WaterChart() {
     chartRef.current = new Chart(ctx, {
       type: "line",
       data: {
-        labels: chartData.map((d) =>
-          new Date(d.timestamp).toLocaleDateString("en-GB", dateOptions)
-        ),
+        labels: chartData.map((d) => {
+          const date = new Date(d.timestamp);
+
+          if (period === "day") {
+            const hour = date.getHours().toString().padStart(2, "0");
+            return `${hour}:00`;
+          } else if (period === "year") {
+            return date.toLocaleDateString("en-GB", { month: "short" });
+          } else {
+            return date.toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "short",
+            });
+          }
+        }),
+
         datasets: [
           {
             label: "Moisture Level (%)",
