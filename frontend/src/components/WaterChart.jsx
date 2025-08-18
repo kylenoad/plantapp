@@ -62,13 +62,6 @@ function WaterChart() {
 
     const ctx = canvasRef.current.getContext("2d");
 
-    let dateOptions;
-    if (period === "year") {
-      dateOptions = { month: "short" };
-    } else {
-      dateOptions = { day: "numeric", month: "short" };
-    }
-
     chartData.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
 
     chartRef.current = new Chart(ctx, {
