@@ -26,8 +26,9 @@ function App() {
           marginTop: "1rem",
         }}
       >
-        Note: All data displayed prior to August 16th is test data. Live data
-        from the Raspberry Pi has been inserted starting August 16th.
+         Note: All data displayed prior to August 16th is test data. Live data
+         from the Raspberry Pi has been inserted starting August 16th.<br /><br />
+         If the dashboard hasn’t been used for a while, it may take ~30 seconds to load. This is because the backend API is hosted on a free tier and spins down during inactivity.
       </p>
     </Router>
   );
