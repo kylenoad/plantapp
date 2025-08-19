@@ -11,7 +11,8 @@ function LastWatered() {
           "https://plantapp-q6a5.onrender.com/readings?period=month"
         );
         const readings = await res.json();
-
+        readings.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+        
         if (readings.length > 1) {
           let found = null;
           for (let i = 1; i < readings.length; i++) {
@@ -20,7 +21,6 @@ function LastWatered() {
 
             if (prev - curr > 100) {
               found = readings[i].timestamp;
-              break;
             }
           }
 
